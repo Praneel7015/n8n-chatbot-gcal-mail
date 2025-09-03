@@ -29,8 +29,7 @@ Instead of working inside n8n or Google UIs, you send natural language requests 
 
 ## How to set up  
 1. Import the workflow into your self-hosted n8n.  
-2. Configure the **Webhook node** (default path: `/chat`).  
-   - Connect it to your chatbot (Discord, Telegram, WhatsApp) or call it directly via HTTP requests.  
+2. Configure the **Webhook node** (default path: `/chat`).    
 3. Create credentials for:  
    - Gmail API (OAuth2)  
    - Google Calendar API (OAuth2)  
@@ -43,6 +42,21 @@ Instead of working inside n8n or Google UIs, you send natural language requests 
    - “Schedule a meeting with alice@example.com tomorrow at 3 PM”  
    - “Check my inbox for emails from today”  
    - “What’s on my calendar this week?”  
+
+---
+
+## Test with a Webhook Chat Interface (optional)
+
+If you want a simple chat UI to test this workflow without building your own frontend, you can use the chat interface here:
+
+- Webhook Chatbot Interface: [webhook-chatbot-interface](https://github.com/Praneel7015/webhook-chatbot-interface)
+
+How to use it:
+1. Open `chat.html` from that repository in your browser.
+2. In the file, set the fetch URL to your n8n webhook endpoint (for local testing, the default is `http://localhost:5678/webhook/chat`).
+3. For deployment, replace the localhost URL with your publicly accessible webhook URL.
+
+This provides a messenger-style interface that’s useful for quickly exercising your webhook and validating assistant behavior during development.
 
 ---
 
